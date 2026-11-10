@@ -6,6 +6,8 @@ app = marimo.App(width="medium", auto_download=["html"])
 
 @app.cell
 def _():
+    ## Adding some notes to see if this is working!!!
+    ## I love Big sugar!@
     # 1. Generate the encoding dictionary!
     import string
 
