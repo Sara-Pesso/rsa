@@ -1,3 +1,5 @@
+from math import ceil, log10
+
 def encrypt_rsa(msg, k, m):
     msg = msg.lower() #TODO: add upper/lower case, punctuation, etc.!
 
@@ -5,10 +7,7 @@ def encrypt_rsa(msg, k, m):
     for char in msg:
         msg_ints.append(letter_to_int[char])
 
-    num_digits = 0
-    while m >= 10**num_digits:
-        num_digits += 1
-    num_digits -= 1
+    num_digits = ceil(log10(m))-1
 
     num_a = ceil(2*len(msg_ints) / num_digits)
 
@@ -80,4 +79,4 @@ def decrypt_rsa(encrypted_b, m, p, q, k, m_tot):
     return decrypted_msg
 
 
-print(decrypt_rsa(encrypted_b, m, p, q, k, m_totient))
+# print(decrypt_rsa(encrypted_b, m, p, q, k, m_totient))
