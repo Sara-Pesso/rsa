@@ -16,7 +16,6 @@ def _():
             exps.append(j)
             k = k - 2**j
 
-        # print(exps)
         mod_m = [a % m]
         for j in range(1, exps[0] + 1):
             mod_m.append(mod_m[j - 1]**2 % m)
