@@ -1,11 +1,14 @@
 import marimo
-from math import ceil, log10
+
 
 __generated_with = "0.25.2"
 app = marimo.App(width="medium", auto_download=["html"])
 
 @app.cell
 def _():
+    # Python dependencies
+    from math import ceil, log10
+    
     # 1. Generate the encoding dictionary!
     import string
 
