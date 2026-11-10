@@ -81,10 +81,8 @@ def _():
             else:
                 v, u = extended_euclidean_alg(m_tot, k)
 
-            # Bezout's solution:
             u, v = m_tot + u, k - v
 
-            # Reduces to: x^k*u = x^(1 + m_tot*v) = (x^1)*(x^m_tot*v) = x * 1^v = x (mod m)
             ai = successive_squaring(bi, u, m)
 
             ai_str = str(ai)
