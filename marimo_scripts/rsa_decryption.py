@@ -98,4 +98,13 @@ def _():
 
         return decrypted_msg
 
+    ## EXAMPLE:
+    m = 163276871
+    p = 12553
+    q = 13007
+    k = 79921
+    m_totient = m - p - q + 1
+    B = [124051554, 123619784, 123420070, 44442925, 132143181] #From previous script!
+    original_msg = decrypt_rsa(B, m, p, q, k, m_totient)
+    print(original_msg)
     return

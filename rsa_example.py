@@ -79,4 +79,4 @@ def decrypt_rsa(encrypted_b, m, p, q, k, m_tot):
     return decrypted_msg
 
 
-# print(decrypt_rsa(encrypted_b, m, p, q, k, m_totient))
+print(decrypt_rsa(encrypted_b, m, p, q, k, m_totient))
