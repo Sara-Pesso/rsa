@@ -24,5 +24,7 @@ def _():
 
         return letter_to_int, int_to_letter
 
-    print(generate_alphabet_dicts())
+    letter_to_int, int_to_letter = generate_alphabet_dicts()
+    print(letter_to_int)
+    print(int_to_letter)
     return
