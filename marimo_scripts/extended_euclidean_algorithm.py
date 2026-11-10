@@ -26,16 +26,9 @@ def _():
     # 4. Extended Euclidean (Backward)
     def extended_euclidean_alg(a, b):
         quotients, remainders = euclidean_alg(a, b)
-
-        # Iteratively calculate Bezout's coefficients
-        # Bezout's Thm: Let a,b be ints with gcd = d
-        # Then there exist ax + by = d
-        # az + bt are multiples of d
         s = [1, 0]
         t = [0, 1]
 
-        # Start: i = 2 b/c we initialize x0 = 1, x1 = 0, y0 = 0, and y1 = 1
-        # Stop: num remainders - 1, b/c we are interested in the last **non 0** remainder from the EA
         for i in range(2, len(remainders) - 1):
             q = quotients[i-2]
             s.append(s[i-2] - q * s[i-1])
